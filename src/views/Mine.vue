@@ -52,6 +52,11 @@
                         </van-radio-group>
                     </template>
                 </van-field>
+                <div style="margin: 16px;">
+                    <van-button @click="outLogin" round block type="info">
+                        退出登录
+                    </van-button>
+                </div>
             </van-form>
         </div>
     </div>
@@ -80,6 +85,10 @@
         this.$router.replace({
           path: '/login'
         })
+      },
+      outLogin() {
+        localStorage.removeItem('userInfo')
+        this.isLogin = false
       }
     }
   }

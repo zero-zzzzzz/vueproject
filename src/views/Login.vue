@@ -115,6 +115,7 @@
             localStorage.setItem('userInfo', JSON.stringify(data))
             this.$toast.success('登录成功')
             this.$router.replace({path:'/home'})
+            localStorage.setItem('active', 0)
           } else {
             this.$toast.fail(msg)
           }
